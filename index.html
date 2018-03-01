@@ -66,6 +66,45 @@
   display: none;
   text-align: center;
 }
+	
+	.contenedor {
+			position: relative;
+			width: 6000px;
+			height: 700px;
+		}
+		.cabecera {
+			display: inline-block;
+			text-decoration: none;
+			padding: 10px;
+			border: 2px solid;
+			position: relative;
+			color: black;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			transform: translateY(2px);
+			z-index: 2;
+		}
+		.pestana {
+			position: absolute;
+			border: 2px solid;
+			height: 100%;
+			visibility: hidden;
+			opacity: 0;
+			transition: visibility 1s, opacity 1s;
+		}
+		
+		.p-activa {
+			visibility: visible;
+			opacity: 1;
+		}
+		.c-activa {
+			border-bottom-color: white;
+		}
+		
+		p{
+			text-align: justify;
+			padding: 10px;
+
        
 </style>
 </head>
