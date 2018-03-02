@@ -1,76 +1,16 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-  <title>My History</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">  
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
- 			visibility: visible;
-			opacity: 1;
-		}
-		.c-activa {
-			border-bottom-color: white;
-		}
+<html lang="en">
+	<head>
 		
-		p{
-			text-align: justify;
-			padding: 10px;
-		}
-/* Center the loader */
-#loader {
-   position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 1;
-   margin: -75px 0 0 -75px;
-  border: 16px solid #f3f3f3;
-  border-radius: 50%
-  border-top: 16px solid #3498db;
-  border-bottom: 16px solid #3498db;
-  width: 120px;
-  height: 120px;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
-}
 
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Add animation to "page content" */
-.animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
-  animation-name: animatebottom;
-  animation-duration: 1s
-}
-
-@-webkit-keyframes animatebottom {
-  from { bottom:-100px; opacity:0 } 
-  to { bottom:0px; opacity:1 }
-}
-
-@keyframes animatebottom { 
-  from{ bottom:-100px; opacity:0 } 
-  to{ bottom:0; opacity:1 }
-}
-
-#myDiv {
-  display: none;
-  text-align: center;
-}
+		<title>My History</title>
+		
+	<style>
 	
-	.contenedor {
-			position: relative;
-			width: 6000px;
-			height: 700px;
+		.contenedor {
+			position: absolute;
+			width: 9000px;
+			height: 1200px;
 		}
 		.cabecera {
 			display: inline-block;
@@ -104,15 +44,38 @@
 		p{
 			text-align: justify;
 			padding: 10px;
-
-       
-</style>
-</head>
-<body onload="myFunction()" style="margin:0;">
-
-<div id=<h1><center>My History</center></h1>
+		}
+		.smar{
+			background: #22AAFF;
+			}
+		footer{
+  width: 100%;
+  margin-top: 10px;
+  display: inline-block;
+  text-align: center;
+}
+		
+			</style>
+	<script>
+	function mostrarPestana(n){
+		var pestanas = document.getElementsByClassName("pestana");
+		var cabecera = document.getElementsByClassName("cabecera");
+		for(i = 0; i<pestanas.length; i++){
+			if(pestanas[i].className.includes("p-activa")){
+				pestanas[i].className = pestanas[i].className.replace("p-activa", "");
+				cabecera[i].className = cabecera[i].className.replace("c-activa", "");
+				break;
+			}
+		}
+		pestanas[n].className += " p-activa";
+		cabecera[n].className += " c-activa";
+	}
+	</script>
+	<body>
+	<aside>
+		<h1><center>My History</center></h1>
 		<div class="contenedor">
-			<a href="#" class="cabecera c-activa" onclick="mostrarPestana(0);"><h2><center>Citie</center></h2></a>
+			<a href="#" class="cabecera c-activa" onclick="mostrarPestana(0);" class="smart"><h2><center>Citie</center></h2></a>
 			<div class="pestana p-activa">
 				<p>
 				<br><h4>Smartcities</h4>
@@ -162,7 +125,7 @@
 			<a href="#" class="cabecera" onclick="mostrarPestana(2);"><h2>Curriculum Vitae</h2></a>
 			<div class="pestana">
 				<p>
-				Name:Hector Alejandro Martinez Garduño<br>
+					Name:Hector Alejandro Martinez Garduño<br>
 				Address:<br>
 				Pennsylvania 241-101<br>
 				Col. Nápoles <br>
@@ -206,44 +169,46 @@
 				% Juan Carlos Juárez Fuentes, 55-16-48-21, Friend<br>
 				% Mariana Rivera Saucedo 55-43-32-34-22, Friend <br>
 				% Graciela Garduño Hernández, 57343283, Mother<br>
-
 				</p>
 			</div>
 			<a href="#" class="cabecera" onclick="mostrarPestana(3);"><h2>SWOT</h2></a>
 			<div class="pestana">
 				<p>
-				</p>></div>
-
-<div style="display:none;" id="myDiv" class="animate-bottom">
-  <div class="col-md-6 col-md-offset-3"><h2>Redirigiendo a la pagina...</h2></div>  
-</div>
-
-<script>
-  function mostrarPestana(n){
-		var pestanas = document.getElementsByClassName("pestana");
-		var cabecera = document.getElementsByClassName("cabecera");
-		for(i = 0; i<pestanas.length; i++){
-			if(pestanas[i].className.includes("p-activa")){
-				pestanas[i].className = pestanas[i].className.replace("p-activa", "");
-				cabecera[i].className = cabecera[i].className.replace("c-activa", "");
-				break;
-			}
-		}
-		pestanas[n].className += " p-activa";
-		cabecera[n].className += " c-activa";
-	}
-  
-var myVar;
-
-function myFunction() {
-    myVar = setTimeout(showPage, 9000);
-}
-
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("myDiv").style.display = "block";
-}
-</script>
-
-</body>
+				<TABLE BORDER><center>
+					<TR>
+						<TD><h1>Strenghts</h1><br>
+						<h2>*Honest<br></h2>
+						<h2>*Proactive<br></h2>
+						<h2>*Autodidact<br></h2>
+						<h2>*Teamwork<br></h2>
+						<h2>*I work under pressure<br></h2>
+						<h2>*Responsable<br></h2>
+						<h2>*Rapid Adaptation</h2></TD>
+						<TD ROWSPAN=2><h1>SWOT</h1></TD>
+						<TD><h1>Weaknesses</h1><br>
+						<h2>*Desperate<br></h2>
+						<h2>*Little Patient<br></h2>
+						<h2>*Perfectionist<br></h2>
+						<h2>*Third party concern<br><h2>
+						</TD>
+					</TR>
+					<TR>
+						<TD><h1>Opportunities </h1><br>
+						<h2>*Different ways to get out of the comfort way<br><h2>
+						<h2>*Continue to grow in knowledge and personally<br><h2>
+						</TD>
+						<TD><h1> Threats</h1><br>
+						<h2>*Routine</h2><br>
+						<h2>*Do not let people become less</h2><br>
+						<h2>*I do not do what I do not like</h2><br>
+						</TD>
+					</TR>
+				</TABLE>
+				
+				</p>
+			</div>
+		</div>
+		</aside>
+		<footer class="smar"> all rights reserved, UNAM FI</footer>
+	</body>
 </html>
